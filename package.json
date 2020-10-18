@@ -1,0 +1,51 @@
+{
+  "name": "angular-2-daterangepicker",
+  "version": "1.1.52",
+  "description": "Bootstrap Daterange picker for angular2 and 4",
+  "main": "index.js",
+  "scripts": {
+    "formatter": "tsfmt -r daterangepicker-component.ts calendar-component.ts daterangepicker-module.ts index.ts daterangepicker-options.ts time-picker-component.ts index.d.ts",
+    "serve": "npm run formatter && rimraf ./dist && tsc -p ./tsconfig.dev.json && concurrently \"tsc -p ./tsconfig.dev.json -w\" \"lite-server\" ",
+    "build": "rimraf ./dist && npm run formatter && tsc -p ./tsconfig.prod.json && cp ./package.json ./dist && cp ./README.md ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technikhil314/angular-2-daterangepicker.git"
+  },
+  "keywords": [
+    "angular2",
+    "angular4",
+    "angular5",
+    "daterangepicker",
+    "bootstrap",
+    "angularX"
+  ],
+  "author": "nikhil.mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technikhil314/angular-2-daterangepicker/issues"
+  },
+  "homepage": "https://technikhil314.github.io/angular-2-daterangepicker/",
+  "dependencies": {
+    "moment": "^2.17.1",
+    "moment-range": "^2.2.0"
+  },
+  "devDependencies": {
+    "@angular/common": ">=2.4.1",
+    "@angular/compiler": ">=2.4.9",
+    "@angular/core": ">=2.4.1",
+    "@angular/forms": ">=2.4.1",
+    "@angular/platform-browser": ">=2.4.9",
+    "@angular/platform-browser-dynamic": ">=2.4.1",
+    "@types/node": "^6.0.57",
+    "concurrently": "^3.1.0",
+    "core-js": "^2.4.1",
+    "jquery": "^3.1.1",
+    "lite-server": "^2.2.2",
+    "reflect-metadata": "^0.1.8",
+    "rimraf": "^2.5.4",
+    "systemjs": "0.19.40",
+    "typescript": "~2.0.10",
+    "typescript-formatter": "^7.2.2"
+  }
+}
